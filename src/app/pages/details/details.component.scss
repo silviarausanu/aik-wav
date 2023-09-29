@@ -1,0 +1,23 @@
+@import "../../../styles/constants";
+
+:host ::ng-deep .mat-mdc-slider{
+
+  .mdc-slider__track {
+    .mdc-slider__track--inactive {
+      background-color: #fad051 !important;
+    }
+    .mdc-slider__track--active  .mdc-slider__track--active_fill {
+      border-color: $aik-brand;
+    }
+  }
+
+  .mdc-slider__thumb-knob {
+    background-color: $aik-brand !important;
+    border-color: $aik-brand;
+  }
+
+  .mdc-slider__thumb--focused  .mdc-slider__thumb-knob{
+    border-color: $aik-brand;
+  }
+
+}

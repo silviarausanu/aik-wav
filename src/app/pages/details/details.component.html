@@ -1,0 +1,111 @@
+<div class="container mt-5" *ngIf="!!item">
+  <h1 class="text-center">
+    <span>
+      <img src="assets/icons/{{item.icon}}.svg" class="img-fluid">
+    </span> &nbsp;
+    <span *ngIf="item.type === 'ship'">
+      <span class="fi fi-{{item.country}}"></span>&nbsp;&nbsp;
+      <span class="">{{item.name}}</span>
+    </span>
+    <span *ngIf="item.type === 'mammal'">
+      <span class="">{{item.mammalType | titlecase}} <span *ngIf="item.mammalSubType"> > {{item.mammalSubType | titlecase}}</span></span>
+    </span>
+    <span *ngIf="item.type === 'tracker'">
+      <span class="">{{item.name}}</span>
+    </span>
+  </h1>
+  <div class="row mt-4">
+    <div class="col-3 pe-1">
+      <h2 class="h4">Information</h2>
+      <div class="w-100 mb-2" *ngIf="!!item.image">
+        <img src="assets/tmp/{{item.image}}" class="img-fluid">
+      </div>
+      <dl class="row">
+        <ng-container *ngFor="let prop of item | keyvalue">
+          <ng-container *ngIf="!(['country', 'name', 'uid', 'image', 'shipType', 'icon', 'mammalType', 'mammalSubType', 'icon'].includes(prop.key))">
+            <dt class="col-sm-6">{{prop.key | propcase}}</dt>
+            <dd class="col-sm-6">
+              <span [innerHTML]="display(prop.key, prop.value)"></span>
+            </dd>
+          </ng-container>
+        </ng-container>
+      </dl>
+    </div>
+    <div class="col-7">
+      <h2 class="h4">Tracking</h2>
+      <mat-slider [min]="timeline.start" [max]="timeline.end" class="w-100" [step]="7200000"  showTickMarks discrete *ngIf="timeline.start && timeline.end" [displayWith]="displayDate">
+        <input value="{{timeline.start}}" matSliderStartThumb>
+        <input value="{{timeline.end}}" matSliderEndThumb>
+      </mat-slider>
+
+      <div  class="w-100 vh-50" *ngIf="!!item">
+        <mgl-map class="vh-50 w-100"
+          [style]="CONFIG.style + CONFIG.key"
+          [zoom]="[2]"
+          [center]="center"
+          [maxPitch]="85"
+          [bearing]="[-2]"
+          [pitch]="[8]"
+          [terrain]="{
+            source: 'bathymetry',
+            exaggeration: 1.5,
+          }"
+        >
+          <mgl-control mglNavigation position="top-left" [visualizePitch]="true" [showCompass]="true"></mgl-control>
+          <mgl-raster-dem-source
+            id="bathymetry"
+            [url]="CONFIG.raster + CONFIG.key"
+          ></mgl-raster-dem-source>
+
+          <mgl-marker *ngFor="let feature of markers; let i = index" [feature]="feature" #marker>
+            <div class="marker">
+              <img src="assets/icons/{{feature.properties?.iconType || ''}}.svg">
+            </div>
+          </mgl-marker>
+
+          <mgl-geojson-source id="official-path">
+            <mgl-feature [geometry]="official"> </mgl-feature>
+          </mgl-geojson-source>
+          <mgl-layer id="route" type="line" source="official-path"
+            [layout]="{
+              'line-join': 'round',
+              'line-cap': 'round'
+            }"
+            [paint]="{
+              'line-color': '#000',
+              'line-width': 4
+            }"
+            ></mgl-layer>
+
+
+            <mgl-geojson-source id="tracked-path">
+              <mgl-feature [geometry]="tracked"> </mgl-feature>
+            </mgl-geojson-source>
+            <mgl-layer id="tracked" type="line" source="tracked-path"
+              [layout]="{
+                'line-join': 'round',
+                'line-cap': 'round'
+              }"
+              [paint]="{
+                'line-color': '#f8bc09',
+                'line-width': 4
+              }"
+              ></mgl-layer>
+
+
+        </mgl-map>
+      </div>
+
+    </div>
+    <div class="col-2">
+      <h2 class="h4">Recordings</h2>
+      <div *ngFor="let re of recordings; let index = index" >
+        <figure>
+          <figcaption class="ps-1 pb-1">{{re.timestamp | date:'dd/MM/yyyy hh:mm'}}</figcaption>
+          <audio controls src="assets/wavs/{{re.wav}}"></audio>
+        </figure>
+      </div>
+    </div>
+  </div>
+
+</div>

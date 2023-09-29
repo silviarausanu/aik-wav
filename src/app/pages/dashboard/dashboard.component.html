@@ -1,0 +1,63 @@
+<div>
+  <div class="container">
+    <div class="row my-4">
+      <div class="col-2">
+        <app-search-filters></app-search-filters>
+      </div>
+      <div class="col-10">
+        <app-search-box></app-search-box>
+
+        <div  class="w-100 my-3 vh-75">
+          <mgl-map class="vh-75 w-100"
+            [style]="CONFIG.style + CONFIG.key"
+            [zoom]="[2]"
+            [center]="[77.62259, 12.60418]"
+            [maxPitch]="85"
+            [bearing]="[0]"
+            [pitch]="[0]"
+            (mapLoad)="mapLoaded($event)"
+            [terrain]="{
+              source: 'bathymetry',
+              exaggeration: 1.5,
+            }"
+          >
+            <mgl-control mglNavigation position="top-left" [visualizePitch]="true" [showCompass]="true"></mgl-control>
+            <mgl-raster-dem-source
+              id="bathymetry"
+              [url]="CONFIG.raster + CONFIG.key"
+            ></mgl-raster-dem-source>
+
+            <mgl-marker *ngFor="let feature of features; let i = index" [feature]="feature" #marker>
+              <div class="marker" (click)="onClick(feature, i)">
+                <img src="assets/icons/{{feature.properties?.iconType || ''}}.svg">
+              </div>
+            </mgl-marker>
+
+            <mgl-popup *ngIf="!!selectedMarker && !!asset && asset.uid" [marker]="getSelectedMarker()">
+              <div>
+                <span>{{asset.icon}}</span> &nbsp;
+                <strong *ngIf="['ship', 'tracker'].includes(asset?.type)">{{asset?.name}}</strong>
+                <strong *ngIf="asset?.type === 'mammal'">
+                  {{asset?.mammalType}} > {{asset?.mammalSubType}}
+                </strong>
+                <a class="d-block"  [routerLink]="['/details', asset?.uid]">Track</a>
+              </div>
+            </mgl-popup>
+          </mgl-map>
+        </div>
+        <div>
+
+        </div>
+        <a href="https://docs.maptiler.com/sdk-js/examples/ocean-bathymetry/">Ocean style map</a>
+        <div>
+
+        </div>
+        <a href=" https://www.geoplaner.com/">Generate paths</a>
+        <ul>
+          <li>charts of ships occurences</li>
+          <li>charts of mammals occurrences</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

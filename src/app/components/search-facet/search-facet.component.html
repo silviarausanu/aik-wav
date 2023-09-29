@@ -1,0 +1,18 @@
+<ng-container *ngIf="!!category && !!items">
+  <div class="d-flex justify-content-between align-items-baseline">
+    <span class="h6 flex-grow-0">
+      {{category | uppercase}}
+    </span>
+  </div>
+  <div *ngFor="let item of items" class="d-flex justify-content-between align-items-center">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" [value]="item.value" [checked]="item.$selected" id="{{category}}-{{item.value}}" (change)="filter(item, $event)">
+      <label class="form-check-label mt-1" for="{{category}}-{{item.value}}">
+        {{item.label || item.value}}
+      </label>
+    </div>
+    <div class="count xs">
+      <span>{{item.count}}</span>
+    </div>
+  </div>
+</ng-container>

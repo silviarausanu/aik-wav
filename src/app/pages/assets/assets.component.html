@@ -1,0 +1,85 @@
+<div>
+  <div class="container">
+    <div class="row my-4">
+      <div class="col-3 pe-5">
+        <app-search-filters></app-search-filters>
+      </div>
+      <div class="col-9">
+        <app-search-box ></app-search-box>
+        <div class="my-5"></div>
+
+        <div class="row">
+          <div *ngFor="let item of items" class="my-2 border rounded-5 col-12">
+            <div class="d-flex p-3" *ngIf="item.type === 'ship'">
+              <div>
+                <img src="assets/tmp/{{item.image}}" class="img-fluid" width="200" *ngIf="!!item.image">
+              </div>
+              <div class="ps-2">
+                <div>
+                  <span class="fi fi-{{item.country}}"></span>&nbsp;&nbsp;
+                  <a class="text-reset" [routerLink]="['/details', item.uid]"><span class="h5">{{item.name}}</span></a>
+                </div>
+                <div class="mt-2">
+                  {{item.shipType | titlecase}}
+                </div>
+                <div class="mt-2">
+                  Sizing:
+                  <span class="text-secondary">Beam: {{item.beam_size}}</span> &nbsp;
+                  <span class="text-secondary">Draught: {{item.draught_size}}</span> &nbsp;
+                  <span class="text-secondary">Dimensions: {{item.dimension}}</span> &nbsp;
+                </div>
+                <div class="mt-2">
+                  Speed:
+                  <span class="text-secondary">Design speed: {{item.design_speed}}</span> &nbsp;
+                  <span class="text-secondary">Engine RPM at design speed: {{item.engine_rpm_design}}</span> &nbsp;
+
+                </div>
+
+              </div>
+            </div>
+            <div class="d-flex p-3" *ngIf="item.type === 'mammal'">
+              <div>
+                <img src="assets/tmp/{{item.image}}"  width="200" *ngIf="!!item.image">
+              </div>
+              <div class="ps-2">
+                <div>
+                  <a class="text-reset" [routerLink]="['/details', item.uid]">
+                    <span class="h5">{{item.mammalType | titlecase}} <span *ngIf="item.mammalSubType"> > {{item.mammalSubType | titlecase}}</span></span>
+                  </a>
+                  <a *ngFor="let source of item.sources" target="_blank" [href]="source" class="px-2">
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+
+                <div class="mt-2">
+                  Sizing:
+                  <span class="text-secondary">Weight: {{item.weight}}</span> &nbsp;
+                </div>
+                <div class="mt-2">
+                  Sounds:
+                  <span class="text-secondary">{{item.soundTypes.join(', ')}}</span> &nbsp;
+                </div>
+
+              </div>
+            </div>
+            <div class="d-flex p-3" *ngIf="item.type === 'tracker'">
+              <div>
+                <img src="assets/icons/recorder.svg" class="img-fluid" width="200">
+              </div>
+              <div class="ps-2">
+                <div>
+                  <a class="text-reset" [routerLink]="['/details', item.uid]"><span class="h5">{{item.name}}</span></a>
+                </div>
+                <div class="mt-2">
+                  <span class="text-secondary">Position: </span> {{item.position}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>

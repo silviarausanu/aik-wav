@@ -1,0 +1,33 @@
+@import "overwrites";
+@import "bootstrap/scss/bootstrap";
+@import "constants";
+@import "components/all";
+
+
+//$fa-font-path: "@fortawesome/fontawesome-free/webfonts";
+@import "@fortawesome/fontawesome-free/scss/fontawesome";
+@import "@fortawesome/fontawesome-free/scss/brands";
+@import "@fortawesome/fontawesome-free/scss/regular";
+@import "@fortawesome/fontawesome-free/scss/solid";
+
+html {
+  height: 100%;
+}
+
+
+body {
+  height: 100%;
+  margin: 0;
+  background-color: $basic-background;
+  color: $basic-text;
+  font-weight: 400;
+  font-size: $fs-default;
+  font-family: "Poppins", sans-serif !important;
+  line-height: 1;
+}
+
+
+
+.highlight {
+  background-image: linear-gradient(to right top, #ffb81c, #fdb918, #fcba14, #fabb0f, #f8bc09, #f7bb06, #f6ba03, #f5b900, #f4b500, #f4b100, #f3ad00, #f2a900);
+}
