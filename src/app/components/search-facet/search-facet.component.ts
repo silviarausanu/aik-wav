@@ -1,4 +1,4 @@
-import { Component, Input, SimpleChanges } from '@angular/core';
+import { Component, EventEmitter, Input, Output, SimpleChanges } from '@angular/core';
 import { Facet } from 'src/app/models/facet';
 import { FacetCategory } from 'src/app/models/facet-category';
 import { FacetsService } from 'src/app/services/facets.service';
@@ -15,6 +15,9 @@ export class SearchFacetComponent {
 
   @Input()
   facets: FacetCategory[] | undefined;
+
+  @Output()
+  filtered: EventEmitter<string[]> = new EventEmitter<string[]>();
 
   items: Facet[] | undefined;
 
@@ -33,6 +36,8 @@ export class SearchFacetComponent {
   }
 
   filter(item: Facet, event: any) {
+    item.$selected = !item.$selected;
+    this.filtered.emit(this.items?.filter(i => i.$selected).map(i => i.value));
   }
 
 

@@ -1,2 +1,2 @@
 <h2 class="h3">Refine</h2>
-<app-search-facet [category]="'types'" [facets]="facets"></app-search-facet>
+<app-search-facet [category]="'type'" [facets]="facets" (filtered)="onFilter($event)"></app-search-facet>

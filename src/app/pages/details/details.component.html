@@ -34,14 +34,14 @@
     <div class="col-7">
       <h2 class="h4">Tracking</h2>
       <mat-slider [min]="timeline.start" [max]="timeline.end" class="w-100" [step]="7200000"  showTickMarks discrete *ngIf="timeline.start && timeline.end" [displayWith]="displayDate">
-        <input value="{{timeline.start}}" matSliderStartThumb>
-        <input value="{{timeline.end}}" matSliderEndThumb>
+        <input [(ngModel)]="timeline.qStart" matSliderStartThumb (ngModelChange)="timelineFilter($event)">
+        <input [(ngModel)]="timeline.qEnd" matSliderEndThumb  (ngModelChange)="timelineFilter($event)">
       </mat-slider>
 
       <div  class="w-100 vh-50" *ngIf="!!item">
         <mgl-map class="vh-50 w-100"
           [style]="CONFIG.style + CONFIG.key"
-          [zoom]="[2]"
+          [zoom]="[4]"
           [center]="center"
           [maxPitch]="85"
           [bearing]="[-2]"

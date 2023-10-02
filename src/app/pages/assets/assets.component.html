@@ -2,10 +2,10 @@
   <div class="container">
     <div class="row my-4">
       <div class="col-3 pe-5">
-        <app-search-filters></app-search-filters>
+        <app-search-filters [facets]="facets" (filtered)="onFilter($event)"></app-search-filters>
       </div>
       <div class="col-9">
-        <app-search-box ></app-search-box>
+        <app-search-box (query)="onQuery($event)"></app-search-box>
         <div class="my-5"></div>
 
         <div class="row">

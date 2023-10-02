@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
 import { GeoService } from './geo.service';
-import { lastValueFrom } from 'rxjs';
+import { filter, lastValueFrom } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { SearchResult } from '../models/search-result';
+import { FacetCategory } from '../models/facet-category';
 
 @Injectable({
   providedIn: 'root'
@@ -11,11 +13,55 @@ export class DataService {
     private geo: GeoService,
     private http: HttpClient,
   ) {
-    this.mockPaths();
+    //this.mockPaths();
   }
 
 
   private assets: {[key: string]: any}[] = [];
+
+  search(query: string, filter: string[]): Promise<SearchResult> {
+    return new Promise((resolve) => {
+      this.getAssets().then((assets:{[key: string]: any}[] ) => {
+        const searchSet =  !!query && query != '' ? assets.filter(a => JSON.stringify(a).includes(query)) : assets;
+        const finalSet = filter.length > 0 ? searchSet.filter(a => filter.includes(a.type)) : searchSet;
+        resolve (
+          {
+            facets: [this.count(searchSet, 'type', filter)],
+            results: finalSet,
+            total: finalSet.length
+          }
+        )
+      });
+    })
+  }
+
+  private count(items:{[key: string]: any}[] , property: string, filters: string[]): FacetCategory {
+    const ind: {[key: string]: number} = {};
+    items.forEach((item) => {
+      if (property in item) {
+        const key = item[property];
+        if (key in ind) {
+          ind[key] = ind[key] + 1;
+        } else {
+          ind[key] = 1;
+        }
+      }
+    });
+    return {
+      name: property,
+      values: 
+        Object.keys(ind).map((key) => {
+          return {
+            value: key,
+            count: ind[key],
+            label: key,
+            $selected: filters.includes(key)
+          }
+        })
+    }
+  }
+
+
 
   getAssets():Promise< {[key: string]: any}[]> {
     return new Promise((resolve) => {
@@ -46,10 +92,13 @@ export class DataService {
 
   }
 
-  getPaths(id: string): Promise<{official: number[][], actual: number[][], start: Date, end: Date}> {
+  getPaths(id: string, start: Date| undefined = undefined, end: Date | undefined = undefined): Promise<{official: number[][], actual: number[][], start: Date, end: Date}> {
     return new Promise((resolve) => {
       lastValueFrom(this.http.get< {[key: string]: any}[]>('assets/data/paths.json')).then(paths => {
-        const pp = paths.filter(p => p.item === id);
+        
+        let pp = paths.filter(p => p.item === id);
+        pp = !!start ? pp.filter(p => new Date(p.timestamp) >= start) : pp;
+        pp = !!end ? pp.filter(p => new Date(p.timestamp) <= end) : pp;
         const official = pp.filter(p => p.type === 'official');
         const actual = pp.filter(p => p.type === 'actual')
         const times = pp.map(p => new Date(p.timestamp).getTime());
@@ -174,8 +223,8 @@ export class DataService {
     console.log(JSON.stringify(devices));
   }
 
-  generateRandomDate(date: Date = new Date('2023-09-20T00:00:00')) {
-    const random = this.getRandomDate(date, new Date())
+  generateRandomDate(date: Date = new Date('2023-09-20T00:00:00'), end: Date = new Date()) {
+    const random = this.getRandomDate(date, end)
     return random;
 }
 

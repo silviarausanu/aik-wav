@@ -2,10 +2,10 @@
   <div class="container">
     <div class="row my-4">
       <div class="col-2">
-        <app-search-filters></app-search-filters>
+        <app-search-filters [facets]="facets" (filtered)="onFilter($event)"></app-search-filters>
       </div>
       <div class="col-10">
-        <app-search-box></app-search-box>
+        <app-search-box (query)="onQuery($event)"></app-search-box>
 
         <div  class="w-100 my-3 vh-75">
           <mgl-map class="vh-75 w-100"
@@ -35,10 +35,10 @@
 
             <mgl-popup *ngIf="!!selectedMarker && !!asset && asset.uid" [marker]="getSelectedMarker()">
               <div>
-                <span>{{asset.icon}}</span> &nbsp;
-                <strong *ngIf="['ship', 'tracker'].includes(asset?.type)">{{asset?.name}}</strong>
+                <img src="assets/icons/{{selectedMarker.properties?.iconType || ''}}.svg"> &nbsp;
+                <strong *ngIf="['ship', 'tracker'].includes(asset?.type)">{{asset?.name | uppercase}}</strong>
                 <strong *ngIf="asset?.type === 'mammal'">
-                  {{asset?.mammalType}} > {{asset?.mammalSubType}}
+                  {{asset?.mammalType | uppercase}} > {{asset?.mammalSubType | uppercase}}
                 </strong>
                 <a class="d-block"  [routerLink]="['/details', asset?.uid]">Track</a>
               </div>
@@ -48,7 +48,7 @@
         <div>
 
         </div>
-        <a href="https://docs.maptiler.com/sdk-js/examples/ocean-bathymetry/">Ocean style map</a>
+       <!-- <a href="https://docs.maptiler.com/sdk-js/examples/ocean-bathymetry/">Ocean style map</a>
         <div>
 
         </div>
@@ -56,7 +56,8 @@
         <ul>
           <li>charts of ships occurences</li>
           <li>charts of mammals occurrences</li>
-        </ul>
+        </ul> -->
+
       </div>
     </div>
   </div>

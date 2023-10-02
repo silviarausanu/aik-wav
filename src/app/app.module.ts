@@ -19,6 +19,7 @@ import { SearchFacetComponent } from './components/search-facet/search-facet.com
 import { PropcasePipe } from './pipes/propcase.pipe';
 import { DatePipe, TitleCasePipe } from '@angular/common';
 import { PopupOnClickComponent } from './components/popup-on-click/popup-on-click.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,8 @@ import { PopupOnClickComponent } from './components/popup-on-click/popup-on-clic
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     NgxMapLibreGLModule,
     MatSliderModule
   ],
