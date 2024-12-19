@@ -1,0 +1,282 @@
+[
+  {
+    "uid": "r_0",
+    "type": "tracker",
+    "icon": "recorder",
+    "name": "AK00101",
+    "position": [88.85786653612554, 16.22262503641648]
+  },
+  {
+    "uid": "r_1",
+    "type": "tracker",
+    "icon": "recorder",
+    "name": "AK00102",
+    "position": [89.00896498188426, 18.08122287229182]
+  },
+  {
+    "uid": "r_2",
+    "type": "tracker",
+    "icon": "recorder",
+    "name": "AK00103",
+    "position": [92.39788899856259, 17.929697858754892]
+  },
+  {
+    "uid": "r_3",
+    "type": "tracker",
+    "icon": "recorder",
+    "name": "AK00104",
+    "position": [85.4296880794334, 18.53705494026516]
+  },
+  {
+    "uid": "r_4",
+    "type": "tracker",
+    "icon": "recorder",
+    "name": "AK00105",
+    "position": [91.92728567330192, 13.655058071844262]
+  },
+  {
+    "uid": "r_5",
+    "type": "tracker",
+    "icon": "recorder",
+    "name": "AK00106",
+    "position": [93.75621806240616, 13.63321816702451]
+  },
+  {
+    "uid": "r_6",
+    "type": "tracker",
+    "icon": "recorder",
+    "name": "AK00107",
+    "position": [89.9264882187188, 19.497851601493892]
+  },
+  {
+    "uid": "r_7",
+    "type": "tracker",
+    "icon": "recorder",
+    "name": "AK00108",
+    "position": [91.74909015678095, 15.024075698309883]
+  },
+  {
+    "uid": "r_8",
+    "type": "tracker",
+    "icon": "recorder",
+    "name": "AK00109",
+    "position": [85.0723658333683, 18.239734241557493]
+  },
+  {
+    "uid": "r_9",
+    "type": "tracker",
+    "icon": "recorder",
+    "name": "AK00110",
+    "position": [91.83405576431421, 18.871232639841853]
+  },
+  {
+    "uid": "r_100",
+    "type": "tracker",
+    "icon": "recorder",
+    "name": "AK00201",
+    "position": [87.85097385075228, 4.079000463027514]
+  },
+  {
+    "uid": "r_101",
+    "type": "tracker",
+    "icon": "recorder",
+    "name": "AK00202",
+    "position": [88.50202247952876, 11.121781974850535]
+  },
+  {
+    "uid": "r_102",
+    "type": "tracker",
+    "icon": "recorder",
+    "name": "AK00203",
+    "position": [91.38664015116068, -1.2298224804627602]
+  },
+  {
+    "uid": "r_103",
+    "type": "tracker",
+    "icon": "recorder",
+    "name": "AK00204",
+    "position": [81.66797087345552, -1.0946326093117453]
+  },
+  {
+    "uid": "r_104",
+    "type": "tracker",
+    "icon": "recorder",
+    "name": "AK00205",
+    "position": [82.63513808386399, 9.704240587450023]
+  },
+  {
+    "uid": "r_105",
+    "type": "tracker",
+    "icon": "recorder",
+    "name": "AK00206",
+    "position": [80.35477396922609, 8.336139379716373]
+  },
+  {
+    "uid": "r_106",
+    "type": "tracker",
+    "icon": "recorder",
+    "name": "AK00207",
+    "position": [89.02115965023376, 1.5190520884834715]
+  },
+  {
+    "uid": "r_107",
+    "type": "tracker",
+    "icon": "recorder",
+    "name": "AK00208",
+    "position": [90.18158210805134, 5.74288528372829]
+  },
+  {
+    "uid": "r_108",
+    "type": "tracker",
+    "icon": "recorder",
+    "name": "AK00209",
+    "position": [80.14518478514015, 4.262742967841039]
+  },
+  {
+    "uid": "r_109",
+    "type": "tracker",
+    "icon": "recorder",
+    "name": "AK00210",
+    "position": [84.39663730662905, 6.025411837121954]
+  },
+  {
+    "uid": "r_200",
+    "type": "tracker",
+    "icon": "recorder",
+    "name": "AK00301",
+    "position": [61.730363050559184, 2.4792121130526663]
+  },
+  {
+    "uid": "r_201",
+    "type": "tracker",
+    "icon": "recorder",
+    "name": "AK00302",
+    "position": [51.41164381142772, -7.019286283055394]
+  },
+  {
+    "uid": "r_202",
+    "type": "tracker",
+    "icon": "recorder",
+    "name": "AK00303",
+    "position": [62.18361299311679, -4.376341232515374]
+  },
+  {
+    "uid": "r_203",
+    "type": "tracker",
+    "icon": "recorder",
+    "name": "AK00304",
+    "position": [51.334173316467854, 8.809042387829198]
+  },
+  {
+    "uid": "r_204",
+    "type": "tracker",
+    "icon": "recorder",
+    "name": "AK00305",
+    "position": [49.98662039309296, -8.367746352981092]
+  },
+  {
+    "uid": "r_205",
+    "type": "tracker",
+    "icon": "recorder",
+    "name": "AK00306",
+    "position": [57.111534360237755, -3.879900047997122]
+  },
+  {
+    "uid": "r_206",
+    "type": "tracker",
+    "icon": "recorder",
+    "name": "AK00307",
+    "position": [53.55921414732531, 3.84690523393553]
+  },
+  {
+    "uid": "r_207",
+    "type": "tracker",
+    "icon": "recorder",
+    "name": "AK00308",
+    "position": [71.91860462904675, -5.780419949635319]
+  },
+  {
+    "uid": "r_208",
+    "type": "tracker",
+    "icon": "recorder",
+    "name": "AK00309",
+    "position": [50.631303434198614, 9.221648119923323]
+  },
+  {
+    "uid": "r_209",
+    "type": "tracker",
+    "icon": "recorder",
+    "name": "AK00310",
+    "position": [52.87955488782293, 2.4913849057702286]
+  },
+  {
+    "uid": "r_300",
+    "type": "tracker",
+    "icon": "recorder",
+    "name": "AK00401",
+    "position": [66.83839609345189, 4.983637820887168]
+  },
+  {
+    "uid": "r_301",
+    "type": "tracker",
+    "icon": "recorder",
+    "name": "AK00402",
+    "position": [74.70310111599252, -1.0643214865694812]
+  },
+  {
+    "uid": "r_302",
+    "type": "tracker",
+    "icon": "recorder",
+    "name": "AK00403",
+    "position": [52.52289172784338, -2.689215181315813]
+  },
+  {
+    "uid": "r_303",
+    "type": "tracker",
+    "icon": "recorder",
+    "name": "AK00404",
+    "position": [71.12069425612408, -2.534610992075484]
+  },
+  {
+    "uid": "r_304",
+    "type": "tracker",
+    "icon": "recorder",
+    "name": "AK00405",
+    "position": [51.04735975381436, -2.7881498465310433]
+  },
+  {
+    "uid": "r_305",
+    "type": "tracker",
+    "icon": "recorder",
+    "name": "AK00406",
+    "position": [66.00675609071934, 2.838343629420743]
+  },
+  {
+    "uid": "r_306",
+    "type": "tracker",
+    "icon": "recorder",
+    "name": "AK00407",
+    "position": [70.78256459842622, -7.720965928032309]
+  },
+  {
+    "uid": "r_307",
+    "type": "tracker",
+    "icon": "recorder",
+    "name": "AK00408",
+    "position": [65.92990674488392, -0.6546171126241571]
+  },
+  {
+    "uid": "r_308",
+    "type": "tracker",
+    "icon": "recorder",
+    "name": "AK00409",
+    "position": [60.797775222427234, 5.5604154750769546]
+  },
+  {
+    "uid": "r_309",
+    "type": "tracker",
+    "icon": "recorder",
+    "name": "AK00410",
+    "position": [61.716270260785805, 6.201039816209871]
+  }
+]

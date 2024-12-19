@@ -1,0 +1,158 @@
+[
+  {
+    "icon": "pack_animals",
+    "type": "mammal",
+    "mammalType": "baleen whale",
+    "mammalSubType": "blue whale",
+    "image": "blue_whale.jpg",
+    "uid": "l_1",
+    "sources": [
+      "https://dosits.org/galleries/audio-gallery/marine-mammals/baleen-whales/blue-whale/",
+      "https://www.researchgate.net/figure/A-typical-Antarctic-blue-whale-Z-call-illustrating-the-wave-form-amplitude-modulation_fig2_272480486"
+    ],
+    "soundTypes": [
+      "Songs consist of a variety of regularly repeated, relatively long units and short.Song units, each lasting about 15-20 s.",
+      "Down-swept D calls that are produced irregularly.",
+      "D calls are produced by both sexes and are thought to be used as “contact calls” between groups of two or more whales"
+    ],
+    "calls_description": "pulses, grunts, groans, and moans, and are typically in the 15-40 Hz range",
+    "weight": "150 tonnes",
+    "additional_info": "lowest frequency sound a human can typically perceive is 20 Hz"
+  },
+  {
+    "icon": "pack_animals",
+    "type": "mammal",
+    "mammalType": "baleen whale",
+    "mammalSubType": "bowhead whale",
+    "image": "bowhead_whale.jpg",
+    "uid": "l_2",
+    "sources": [
+      "https://dosits.org/galleries/audio-gallery/marine-mammals/baleen-whales/blue-whale/",
+      "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0052072"
+    ],
+    "soundTypes": [],
+    "calls_description": "sounds to communicate while travelling, feeding, and socialising; intense calls for communication and navigation are produced especially during migration season",
+    "weight": "55 tonnes",
+    "additional_info": "They have massive triangular skull. They have longest baleen of the baleen whales, growing to more than 4 m (13 ft)."
+  },
+  {
+    "icon": "pack_animals",
+    "type": "mammal",
+    "mammalType": "toothed whales",
+    "mammalSubType": "Amazon river dolphin, Boto",
+    "image": "boto.jpg",
+    "uid": "l_3",
+    "sources": [
+      "https://dosits.org/galleries/audio-gallery/marine-mammals/baleen-whales/blue-whale/",
+      "https://www.researchgate.net/figure/Pulsed-vocalizations-of-Amazon-river-dolphin-Spectrogram-parameters-FFT-length-of-2048_fig2_301727614"
+    ],
+    "soundTypes": ["clicking noises", "whistling and buzzing tones"],
+    "calls_description": "whistling tones to communicate; depend much more on its sense of echolocation than vision when navigating and finding prey.",
+    "weight": "180 kg",
+    "additional_info": "1. Boto can be found in 6 countries in South America: Bolivia, Brazil, Colombia, Ecuador, Peru, and Venezuela. 2. Also called as boto, bufeo or pink river dolphin."
+  },
+  {
+    "icon": "pack_animals",
+    "type": "mammal",
+    "mammalType": "toothed whales",
+    "mammalSubType": "Beaked Whale",
+    "image": "Beaked_Whales.jpg",
+    "uid": "l_4",
+    "sources": [
+      "https://dosits.org/galleries/audio-gallery/marine-mammals/baleen-whales/blue-whale/",
+      "https://pubs.aip.org/asa/jasa/article-abstract/134/3/2293/811347/Species-specific-beaked-whale-echolocation-signals?redirectedFrom=fulltext"
+    ],
+    "soundTypes": ["Digital Acoustic Recording Tags (D-tags)"],
+    "calls_description": "clicks, click trains, and buzzes",
+    "weight": "3 tonnes",
+    "additional_info": "1. They are one of the least known families of large mammals as well as one of the few groups of large mammals for which new species are still being identified.  2. They contain 1 or 2 pairs of teeth in the lower jaw."
+  },
+  {
+    "icon": "pack_animals",
+    "type": "mammal",
+    "mammalType": "toothed whales",
+    "mammalSubType": "Sperm whale",
+    "image": "Sperm_whale.jpg",
+    "uid": "l_5",
+    "sources": [
+      "https://en.wikipedia.org/wiki/Sperm_whale",
+      "https://dosits.org/galleries/audio-gallery/marine-mammals/toothed-whales/sperm-whale/"
+    ],
+    "soundTypes": ["clicks", "creaks"],
+    "calls_description": "directional clicks, patterns of clicks called codas",
+    "weight": "80 tonnes",
+    "additional_info": "Sperm whales are deep divers, descending as deep as 1,000 meters and holding their breath for up to 90 minutes."
+  },
+  {
+    "icon": "pack_animals",
+    "type": "mammal",
+    "mammalType": "genus Sousa",
+    "mammalSubType": "humpback dolphin",
+    "image": "humpback_dolphin.png",
+    "uid": "l_6",
+    "sources": [
+      "https://dosits.org/galleries/audio-gallery/marine-mammals/toothed-whales/indo-pacific-humpback-dolphin/",
+      "https://www.researchgate.net/publication/281667044_Apparent_source_level_of_free-ranging_humpback_dolphin_Sousa_chinensis_in_the_South_China_Sea"
+    ],
+    "soundTypes": ["Pulses", "Whistle"],
+    "calls_description": "-",
+    "weight": "100 to 139 kg",
+    "additional_info": "These dolphins are characterized by the conspicuous humps and elongated dorsal fins found on the backs of adults of the species"
+  },
+  {
+    "icon": "pack_animals",
+    "type": "mammal",
+    "mammalType": "sea cow",
+    "mammalSubType": "dugong",
+    "image": "dugong.jpg",
+    "uid": "l_7",
+    "sources": [
+      "https://pubmed.ncbi.nlm.nih.gov/23968055/#:~:text=Source%20levels%20for%20each%20of,%CE%BCPa%20at%201%20m%2C%20respectively",
+      "https://www.jstor.org/stable/1382616#:~:text=a%20bandwidth%20of%20740%20Hz,to%20four%20or%20more%20harmonics.&text=and%20were%20associated%20with%20movements%20that%20appeared%20to%20be%20displays."
+    ],
+    "soundTypes": ["chirp", "bark", "squeak", "quack"],
+    "calls_description": "-",
+    "weight": "400 kg",
+    "additional_info": "Dugong has a fusiform body with no dorsal fin or hind limbs."
+  },
+  {
+    "icon": "pack_animals",
+    "type": "mammal",
+    "mammalType": "pinniped",
+    "mammalSubType": "harbor seal",
+    "image": "harbor_seal.jpg",
+    "uid": "l_8",
+    "sources": [
+      "https://bpb-us-e1.wpmucdn.com/sites.ucsc.edu/dist/d/804/files/2019/06/pub_183_2016.pdf",
+      "https://dosits.org/galleries/audio-gallery/marine-mammals/pinnipeds/harbor-seal/"
+    ],
+    "soundTypes": [
+      "short barks",
+      "tonal honks",
+      "grunts",
+      "growls",
+      "roars",
+      "moans",
+      "pup contact calls"
+    ],
+    "calls_description": "-",
+    "weight": "140 kg"
+  },
+  {
+    "icon": "pack_animals",
+    "type": "mammal",
+    "mammalType": "pinniped",
+    "mammalSubType": "walrus",
+    "image": "Walrus.jpg",
+    "uid": "l_9",
+    "sources": [
+      "https://dosits.org/galleries/audio-gallery/marine-mammals/pinnipeds/walrus/",
+      "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8242830/",
+      "https://en.wikipedia.org/wiki/Walrus"
+    ],
+    "soundTypes": ["taps", "knock", "pulses", "bell-like sounds"],
+    "calls_description": "-",
+    "weight": "0.8 to 2 tonnes",
+    "additional_info": "1. Walrus live mostly in shallow waters above the continental shelves.  2. Adult walrus are characterised by prominent tusks and whiskers.  3. Its skin is highly wrinkled and thick, up to 10 cm (4 in) around the neck and shoulders of males"
+  }
+]
